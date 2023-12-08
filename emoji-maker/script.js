@@ -1,7 +1,8 @@
 const colors = document.querySelectorAll(".skin");
 const rightСard = document.querySelector(".card.right-card");
-const img = rightСard.querySelector("#skin");
+const skinImg = rightСard.querySelector("#skin");
 const eyeImg = rightСard.querySelector("#eyes");
+const mouthImg = rightСard.querySelector("#mouth");
 
 const skinCard = document.querySelector("#select-skin-card");
 const eyeCard = document.querySelector("#select-eyes-card");
@@ -12,15 +13,15 @@ const greenSkin = document.getElementById("green-skin");
 const redSkin = document.getElementById("red-skin");
 
 yellowSkin.addEventListener("click", function () {
-  img.src = "/emoji-maker/assets/skin/yellow.png";
+  skinImg.src = "/emoji-maker/assets/skin/yellow.png";
 });
 
 greenSkin.addEventListener("click", function () {
-  img.src = "/emoji-maker/assets/skin/green.png";
+  skinImg.src = "/emoji-maker/assets/skin/green.png";
 });
 
 redSkin.addEventListener("click", function () {
-  img.src = "/emoji-maker/assets/skin/red.png";
+  skinImg.src = "/emoji-maker/assets/skin/red.png";
 });
 
 const arrowSkin = document.querySelector(".next-step.show-eyes-card");
@@ -67,6 +68,32 @@ eyeCard.addEventListener("click", e => {
       break;
     case "eye-winking":
       eyeImg.src = "./assets/eyes/winking.png";
+      break;
+    default:
+      break;
+  }
+});
+
+mouthCard.addEventListener("click", e => {
+  const targetId = e.target.id;
+  switch (targetId) {
+    case "mouth-open":
+      mouthImg.src = "./assets/mouth/open.png";
+      break;
+    case "mouth-smiling":
+      mouthImg.src = "./assets/mouth/smiling.png";
+      break;
+    case "mouth-straight":
+      mouthImg.src = "./assets/mouth/straight.png";
+      break;
+    case "mouth-sad":
+      mouthImg.src = "./assets/mouth/sad.png";
+      break;
+    case "mouth-teeth":
+      mouthImg.src = "./assets/mouth/teeth.png";
+      break;
+    case "eye-winking":
+      mouthImg.src = "./assets/eyes/winking.png";
       break;
     default:
       break;
